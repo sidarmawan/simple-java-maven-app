@@ -6,10 +6,9 @@ pipeline {
         sh 'echo "hello world !"'
       }
     }
-    stage('step-2') {
+    stage('test') {
       steps {
-        echo 'hello world'
-        sh 'hello worlds '
+        sh 'echo "Hello Worlds"'
       }
     }
   }
