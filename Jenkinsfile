@@ -11,5 +11,10 @@ pipeline {
         sh 'echo "dia"'
       }
     }
+    stage('dep') {
+      steps {
+        sh 'echo "finis your Project"'
+      }
+    }
   }
 }
