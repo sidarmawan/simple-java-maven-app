@@ -1,4 +1,4 @@
-vim Jenkinsfile
+vim Jenkinsfile2
 
 pipeline {
     agent any
