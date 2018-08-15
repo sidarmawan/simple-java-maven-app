@@ -8,7 +8,7 @@ pipeline {
     }
     stage('test') {
       steps {
-        sh 'echo "hai"'
+        sh 'echo "hai masyarakat"'
       }
     }
   }
