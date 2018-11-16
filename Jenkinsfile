@@ -1,21 +1,28 @@
+vim Jenkinsfile
+
 pipeline {
-  agent any
-  stages {
-    stage('step-1') {
-      steps {
-        sh 'echo "hello world i try to build a project "'
-      }
+    agent any
+    tools {
+        maven 'maven'
+        jdk 'jdk'
     }
-    stage('build') {
-      steps {
-        sh 'file 45'
-        sh 'echo "testing"'
-      }
+    stages {
+        stage('Build') {
+            steps {
+                sh 'file45'
+                sh 'mvn clean package'
+            }
+        }
+        stage('Test') {
+            steps {
+                sh 'mvn test'
+            }
+            post {
+                always {
+                    junit 'target/surefire-reports/*.xml'
+                }
+            }
+        }
     }
-    stage('dep') {
-      steps {
-        sh 'echo "finis your Project and clear no error"'
-      }
-    }
-  }
 }
+
