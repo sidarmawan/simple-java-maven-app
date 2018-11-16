@@ -8,7 +8,7 @@ pipeline {
     }
     stage('build') {
       steps {
-        sh 'file "45"'
+        sh 'file 45'
         sh 'echo "testing"'
       }
     }
