@@ -9,7 +9,6 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'file45'
                 sh 'mvn clean package'
             }
         }
